@@ -37,6 +37,7 @@ public class GPDispatcherServlet extends HttpServlet {
         Map<String,String[]> params = req.getParameterMap();
         method.invoke(this.mapping.get(method.getDeclaringClass().getName()),new Object[]{req,resp,params.get("name")[0]});
     }
+
     @Override
     public void init(ServletConfig config) throws ServletException {
         InputStream is = null;
